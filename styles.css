@@ -1,43 +1,128 @@
+/* Basic Tabbed Pane Styling */
+.tab-container {
+  width: 100%;
+  margin-top: 2rem;
+}
 
+.tab-buttons {
+  display: flex;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #5a5a7a;
+}
+
+.tab-button {
+  background-color: #2a2a4a;
+  color: #add8e6;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-right: 5px;
+}
+
+.tab-button:hover {
+  background-color: #3f3f6f;
+}
+
+.tab-button.active {
+  background-color: #3f3f6f;
+  color: #dda0dd; /* Violet for active tab */
+  border-bottom: 2px solid #dda0dd;
+}
+
+.tab-content {
+  background-color: #2a2a4a;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tab-pane {
+  display: none; /* Hidden by default */
+}
+
+.tab-pane.active {
+  display: block; /* Show active tab */
+}
+
+/* Existing styles for content remain the same */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0e0e0e;
-  color: #e4e4e4;
+  background-color: #1a1a2e; /* Darker background, leaning towards violet/blue */
+  color: #e0e0e0; /* Lighter text color */
   margin: 0;
   padding: 2rem;
 }
 
 h1 {
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+  font-size: 2.8rem; /* Slightly larger */
+  margin-bottom: 2.5rem; /* More space */
+  color: #9370db; /* Medium violet */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
 }
 
 h2 {
-  font-size: 1.5rem;
-  margin-top: 3rem;
-  color: #78dce8;
+  font-size: 1.8rem; /* Slightly larger */
+  margin-top: 3.5rem; /* More space */
+  color: #7a82ed; /* Blueish violet */
 }
 
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem; /* More space */
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1rem;
-  background-color: #1e1e1e;
-  border: 1px solid #444;
+  margin-top: 1.2rem; /* More space */
+  background-color: #2a2a4a; /* Darker background for tables */
+  border: 1px solid #5a5a7a; /* Border matching the scheme */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
 th, td {
-  padding: 0.8rem;
-  border: 1px solid #444;
+  padding: 1rem; /* More padding */
+  border: 1px solid #5a5a7a;
   text-align: left;
 }
 
 th {
-  background-color: #2a2a2a;
-  color: #ffd700;
+  background-color: #3f3f6f; /* Header background */
+  color: #add8e6; /* Light blue */
+  font-weight: bold;
+}
+
+/* Iframe and title specific styles */
+.iframe-container {
+  display: flex; /* Makes iframes side by side */
+  justify-content: space-around; /* Distributes space around them */
+  gap: 2rem; /* Space between iframes */
+  margin-top: 3rem;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.iframe-box {
+  flex: 1; /* Allows boxes to grow and shrink */
+  min-width: 45%; /* Minimum width for each box */
+  text-align: center;
+}
+
+.violet-title {
+  color: #dda0dd; /* Beautiful violet */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.blue-title {
+  color: #87cefa; /* Sky blue */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }

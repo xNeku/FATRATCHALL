@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,100 +9,145 @@
 <body>
   <h1>Chall Fat Rat Project</h1>
 
-  <section>
-    <h2>✅ Clasificación Situacional</h2>
-    <table>
-        <tr><th>⭐️ Muy seguro</th><td>Rakan</td></tr>
-      <tr><th>✅ Seguro situacional</th><td>Poppy</td></tr>
-      <tr><th>🤏 Situacional</th><td>Hwei</td></tr>
-      <tr><th>🚫 Evitar</th><td>Pyke</td></tr>
-        
-    </table>
-  </section>
+  <div class="tab-container">
+    <div class="tab-buttons">
+        <button class="tab-button active" onclick="openTab(event, 'Iframes')">Players</button>
+      <button class="tab-button " onclick="openTab(event, 'Tablas')">Chuleta</button>
+      
+    </div>
 
-  <section>
-    <h2>🤼‍♂️ Matchups</h2>
-    <table>
-      <tr>
-        <th>Tu pick</th>
-        <th>Bueno contra (Supports)</th>
-        <th>Bueno contra (ADCs)</th>
-        <th>Malo contra (cuidado con...)</th>
-      </tr>
-      <tr>
-        <td>Pyke</td>
-        <td>Enchanters (Yuumi, Lulu, Janna)</td>
-        <td>ADCs sin movilidad (Jhin, Varus, Kog’Maw)</td>
-        <td>Engage pesados (Nautilus, Leona), peel fuerte</td>
-      </tr>
-      <tr>
-        <td>Hwei</td>
-        <td>Engage lentos (Alistar, Leona, Rakan)</td>
-        <td>ADCs estáticos (Jhin, Aphelios, Ashe)</td>
-        <td>Hooks rápidos (Blitzcrank), asesinos, snowball</td>
-      </tr>
-      <tr>
-        <td>Rakan</td>
-        <td>Melee sin movilidad (Nautilus, Leona)</td>
-        <td>ADCs sin dash (Jhin, Miss Fortune)</td>
-        <td>Peel duros (Morgana, Karma), poke excesivo</td>
-      </tr>
-      <tr>
-        <td>Poppy</td>
-        <td>Dashers (Rakan, Leona, Tristana, Kai’Sa)</td>
-        <td>ADCs con movilidad (Lucian, Vayne, Samira)</td>
-        <td>Pokeo constante (Zyra, Karma), enchanters que te kitean</td>
-      </tr>
-    </table>
-  </section>
+    <div class="tab-content">
+      <div id="Tablas" class="tab-pane active">
+        <section>
+          <h2>✅ Clasificación Situacional</h2>
+          <table>
+              <tr><th>⭐️ Muy seguro</th><td>Rakan</td></tr>
+            <tr><th>✅ Seguro situacional</th><td>Poppy</td></tr>
+            <tr><th>🤏 Situacional</th><td>Hwei</td></tr>
+            <tr><th>🚫 Evitar</th><td>Pyke</td></tr>
+              
+          </table>
+        </section>
 
-  <section>
-    <h2>🤝 Mejores combinaciones con ADC</h2>
-    <table>
-      <tr>
-        <th>Support</th>
-        <th>Mejores ADCs aliados</th>
-        <th>¿Por qué funcionan bien juntos?</th>
-      </tr>
-      <tr>
-        <td>Pyke</td>
-        <td>Draven, Kalista, Lucian, Samira, Tristana<br>(Jhin también funciona)</td>
-        <td>All-in, daño rápido, roaming temprano. Con Jhin: burst a distancia + CC.</td>
-      </tr>
-      <tr>
-        <td>Hwei</td>
-        <td>Jhin, Caitlyn, Ezreal, Aphelios, Varus<br>Seraphine, Ziggs (AP carries)</td>
-        <td>Control de mapa, CC, poke seguro. Con APs, ayuda en control y limpieza.</td>
-      </tr>
-      <tr>
-        <td>Rakan</td>
-        <td>Xayah ❤️, Kai’Sa, Samira, Lucian, Tristana<br>Twitch (combo sorpresa)</td>
-        <td>Engage rápido y sincronía, con Twitch: engage invisible sorpresa.</td>
-      </tr>
-      <tr>
-        <td>Poppy</td>
-        <td>Jhin, Twitch, Kog’Maw, Aphelios, Ashe<br>Vayne (vs dashes)</td>
-        <td>Peel fuerte, cancela engages. Ideal para ADCs frágiles y sin movilidad.</td>
-      </tr>
-    </table>
-  </section>
-  <iframe src="https://lobobot.com/box/token/PWXGrJKnBimYHnlF" 
-        width="100%" 
-        height="600" 
-        style="border:none;">
-</iframe> 
-<iframe src="https://lobobot.com/box/token/n5JF986OhZTzlc1z" 
-        width="100%" 
-        height="600" 
-        style="border:none;">
-</iframe> 
+        <section>
+          <h2>🤼‍♂️ Matchups</h2>
+          <table>
+            <tr>
+              <th>Tu pick</th>
+              <th>Bueno contra (Supports)</th>
+              <th>Bueno contra (ADCs)</th>
+              <th>Malo contra (cuidado con...)</th>
+            </tr>
+            <tr>
+              <td>Pyke</td>
+              <td>Enchanters (Yuumi, Lulu, Janna)</td>
+              <td>ADCs sin movilidad (Jhin, Varus, Kog’Maw)</td>
+              <td>Engage pesados (Nautilus, Leona), peel fuerte</td>
+            </tr>
+            <tr>
+              <td>Hwei</td>
+              <td>Engage lentos (Alistar, Leona, Rakan)</td>
+              <td>ADCs estáticos (Jhin, Aphelios, Ashe)</td>
+              <td>Hooks rápidos (Blitzcrank), asesinos, snowball</td>
+            </tr>
+            <tr>
+              <td>Rakan</td>
+              <td>Melee sin movilidad (Nautilus, Leona)</td>
+              <td>ADCs sin dash (Jhin, Miss Fortune)</td>
+              <td>Peel duros (Morgana, Karma), poke excesivo</td>
+            </tr>
+            <tr>
+              <td>Poppy</td>
+              <td>Dashers (Rakan, Leona, Tristana, Kai’Sa)</td>
+              <td>ADCs con movilidad (Lucian, Vayne, Samira)</td>
+              <td>Pokeo constante (Zyra, Karma), enchanters que te kitean</td>
+            </tr>
+          </table>
+        </section>
 
+        <section>
+          <h2>🤝 Mejores combinaciones con ADC</h2>
+          <table>
+            <tr>
+              <th>Support</th>
+              <th>Mejores ADCs aliados</th>
+              <th>¿Por qué funcionan bien juntos?</th>
+            </tr>
+            <tr>
+              <td>Pyke</td>
+              <td>Draven, Kalista, Lucian, Samira, Tristana<br>(Jhin también funciona)</td>
+              <td>All-in, daño rápido, roaming temprano. Con Jhin: burst a distancia + CC.</td>
+            </tr>
+            <tr>
+              <td>Hwei</td>
+              <td>Jhin, Caitlyn, Ezreal, Aphelios, Varus<br>Seraphine, Ziggs (AP carries)</td>
+              <td>Control de mapa, CC, poke seguro. Con APs, ayuda en control y limpieza.</td>
+            </tr>
+            <tr>
+              <td>Rakan</td>
+              <td>Xayah ❤️, Kai’Sa, Samira, Lucian, Tristana<br>Twitch (combo sorpresa)</td>
+              <td>Engage rápido y sincronía, con Twitch: engage invisible sorpresa.</td>
+            </tr>
+            <tr>
+              <td>Poppy</td>
+              <td>Jhin, Twitch, Kog’Maw, Aphelios, Ashe<br>Vayne (vs dashes)</td>
+              <td>Peel fuerte, cancela engages. Ideal para ADCs frágiles y sin movilidad.</td>
+            </tr>
+          </table>
+        </section>
+      </div>
 
-<iframe src="https://streamer-overlay.op.gg/overlay/1ef5b41f-6dbf-4866-bf99-3319983010ae" 
-        width="400" 
-        height="600" 
-        style="border:none;">
-</iframe>
+      <div id="Iframes" class="tab-pane">
+        <div class="iframe-container">
+          <div class="iframe-box">
+            <h2 class="violet-title">YAMARADA</h2>
+            <iframe src="https://lobobot.com/box/token/PWXGrJKnBimYHnlF" 
+                width="100%" 
+                height="600" 
+                style="border:none;">
+            </iframe> 
+          </div>
+          <div class="iframe-box">
+            <h2 class="blue-title">MALIDAMAS</h2>
+            <iframe src="https://lobobot.com/box/token/n5JF986OhZTzlc1z" 
+                width="100%" 
+                height="600" 
+                style="border:none;">
+            </iframe> 
+          </div>
+        </div>
+
+       
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openTab(evt, tabName) {
+      // Declare all variables
+      var i, tabcontent, tabbuttons;
+
+      // Get all elements with class="tab-pane" and hide them
+      tabcontent = document.getElementsByClassName("tab-pane");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tab-button" and remove the "active" class
+      tabbuttons = document.getElementsByClassName("tab-button");
+      for (i = 0; i < tabbuttons.length; i++) {
+        tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Set the default active tab on page load
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelector(".tab-button").click(); // Clicks the first button
+    });
+  </script>
 </body>
 </html>
-
