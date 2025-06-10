@@ -1,36 +1,52 @@
-/* Basic Tabbed Pane Styling */
+/* ========== BODY & HEADINGS ========== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 2.5rem;
+  color: #9370db;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  color: #7a82ed;
+}
+
+/* ========== TAB CONTAINER PRINCIPAL ========== */
 .tab-container {
   width: 100%;
   margin-top: 2rem;
 }
 
-.tab-buttons {
-  display: flex;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid #5a5a7a;
+.tab-container input[type="radio"] {
+  display: none;
 }
 
 .tab-button {
+  display: inline-block;
   background-color: #2a2a4a;
   color: #add8e6;
   padding: 12px 20px;
+  margin-right: 5px;
   border: none;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s, color 0.3s;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  margin-right: 5px;
 }
 
 .tab-button:hover {
   background-color: #3f3f6f;
-}
-
-.tab-button.active {
-  background-color: #3f3f6f;
-  color: #dda0dd; /* Violet for active tab */
-  border-bottom: 2px solid #dda0dd;
 }
 
 .tab-content {
@@ -40,79 +56,121 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* Ocultar todos los panes */
 .tab-pane {
-  display: none; /* Hidden by default */
+  display: none;
 }
 
-.tab-pane.active {
-  display: block; /* Show active tab */
+/* Mostrar pane seleccionado */
+#tab-players:checked  ~ .tab-content #content-players,
+#tab-chuleta:checked  ~ .tab-content #content-chuleta {
+  display: block;
 }
 
-/* Existing styles for content remain the same */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #1a1a2e; /* Darker background, leaning towards violet/blue */
-  color: #e0e0e0; /* Lighter text color */
-  margin: 0;
-  padding: 2rem;
+/* Estilos de la pestaña activa */
+#tab-players:checked + label,
+#tab-chuleta:checked + label {
+  background-color: #3f3f6f;
+  color: #dda0dd;
+  border-bottom: 2px solid #dda0dd;
 }
 
-h1 {
-  text-align: center;
-  font-size: 2.8rem; /* Slightly larger */
-  margin-bottom: 2.5rem; /* More space */
-  color: #9370db; /* Medium violet */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+/* ========== NESTED TAB CONTAINER ========== */
+.nested-tab-container {
+  margin-top: 1.5rem;
 }
 
-h2 {
-  font-size: 1.8rem; /* Slightly larger */
-  margin-top: 3.5rem; /* More space */
-  color: #7a82ed; /* Blueish violet */
+.nested-tab-container input[type="radio"] {
+  display: none;
 }
 
-section {
-  margin-bottom: 2.5rem; /* More space */
+.nested-tab-button {
+  display: inline-block;
+  background-color: #2a2a4a;
+  color: #add8e6;
+  padding: 8px 16px;
+  margin-right: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, color 0.3s;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
+.nested-tab-button:hover {
+  background-color: #3f3f6f;
+}
+
+.nested-tab-content {
+  background-color: #2a2a4a;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nested-tab-pane {
+  display: none;
+}
+
+/* Mostrar pane interno según radio */
+#tab-neku:checked      ~ .nested-tab-content #content-neku,
+#tab-malidamas:checked ~ .nested-tab-content #content-malidamas {
+  display: block;
+}
+
+/* Estilo de label activo */
+#tab-neku:checked + label,
+#tab-malidamas:checked + label {
+  background-color: #3f3f6f;
+  color: #dda0dd;
+  border-bottom: 2px solid #dda0dd;
+}
+
+/* Diferenciar cabeceras de Malidamas */
+#content-malidamas table th {
+  background-color: #467c9b;
+}
+
+/* ========== TABLAS ========== */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1.2rem; /* More space */
-  background-color: #2a2a4a; /* Darker background for tables */
-  border: 1px solid #5a5a7a; /* Border matching the scheme */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  margin-top: 1rem;
+  background-color: #2a2a4a;
+  border: 1px solid #5a5a7a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 th, td {
-  padding: 1rem; /* More padding */
+  padding: 1rem;
   border: 1px solid #9595ce;
   text-align: left;
 }
 
 th {
-  background-color: #3f3f6f; /* Header background */
-  color: #add8e6; /* Light blue */
+  background-color: #3f3f6f;
+  color: #add8e6;
   font-weight: bold;
 }
 
-/* Iframe and title specific styles */
+/* ========== IFRAMES ========== */
 .iframe-container {
-  display: flex; /* Makes iframes side by side */
-  justify-content: space-around; /* Distributes space around them */
-  gap: 2rem; /* Space between iframes */
-  margin-top: 3rem;
-  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .iframe-box {
-  flex: 1; /* Allows boxes to grow and shrink */
-  min-width: 45%; /* Minimum width for each box */
+  flex: 1;
+  min-width: 45%;
   text-align: center;
 }
 
 .violet-title {
-  color: #dda0dd; /* Beautiful violet */
+  color: #dda0dd;
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: bold;
@@ -120,7 +178,7 @@ th {
 }
 
 .blue-title {
-  color: #87cefa; /* Sky blue */
+  color: #87cefa;
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: bold;
