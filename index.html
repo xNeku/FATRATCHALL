@@ -1,172 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chall Fat Rat Project</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Comidas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Chall Fat Rat Project</h1>
 
-  <div class="tab-container">
-    <!-- Tabs principales -->
-    <input type="radio" name="main-tabs" id="tab-players" checked>
-    <label for="tab-players" class="tab-button">Players</label>
+    <div class="container">
+        <header>
+            <h1>Planificador de Comidas</h1>
+        </header>
 
-    <input type="radio" name="main-tabs" id="tab-chuleta">
-    <label for="tab-chuleta" class="tab-button">Chuleta</label>
+        <main>
+            <form id="meal-form">
+                <h2>Añadir Nueva Comida</h2>
+                <div class="form-group">
+                    <label for="meal-name">Nombre de la Comida</label>
+                    <input type="text" id="meal-name" placeholder="Ej: Batido de Proteínas" required>
+                </div>
+                <div class="form-group">
+                    <label for="meal-ingredients">Ingredientes / Descripción</label>
+                    <textarea id="meal-ingredients" rows="4" placeholder="Ej: 2 plátanos, 30g de proteína, leche..." required></textarea>
+                </div>
+                <button type="submit">Añadir Comida</button>
+            </form>
 
-    <div class="tab-content">
-      <!-- Contenido Players -->
-      <div class="tab-pane" id="content-players">
-        <div class="iframe-container">
-          <div class="iframe-box">
-            <h2 class="violet-title">YAMARADA</h2>
-            <iframe src="https://lobobot.com/box/token/PWXGrJKnBimYHnlF" 
-                    width="100%" height="600" style="border:none;"></iframe> 
-          </div>
-          <div class="iframe-box">
-            <h2 class="blue-title">MALIDAMAS</h2>
-            <iframe src="https://lobobot.com/box/token/n5JF986OhZTzlc1z" 
-                    width="100%" height="600" style="border:none;"></iframe> 
-          </div>
-          <div class="iframe-box">
-            <h2 class="violet-title">N3KUSTEPMOM</h2>
-            <iframe src="https://lobobot.com/box/token/6aInAdWWt3me6wrA" 
-                    width="100%" height="600" style="border:none;"></iframe> 
-          </div>
-        </div>
-      </div>
-
-      <!-- Contenido Chuleta -->
-      <div class="tab-pane" id="content-chuleta">
-        <div class="nested-tab-container">
-          <!-- Tabs internas -->
-          <input type="radio" name="nested-tabs" id="tab-neku" checked>
-          <label for="tab-neku" class="nested-tab-button">Neku</label>
-
-          <input type="radio" name="nested-tabs" id="tab-malidamas">
-          <label for="tab-malidamas" class="nested-tab-button">Malidamas</label>
-
-          <div class="nested-tab-content">
-            <!-- Pestaña Neku -->
-            <div class="nested-tab-pane" id="content-neku">
-              <section>
-                <h2>✅ Clasificación Situacional</h2>
-                <table>
-                  <tr><th>⭐️ Muy seguro</th><td>Rakan</td></tr>
-                  <tr><th>✅ Seguro situacional</th><td>Poppy</td></tr>
-                  <tr><th>🤏 Situacional</th><td>Hwei</td></tr>
-                  <tr><th>🚫 Evitar</th><td>Pyke</td></tr>
-                </table>
-              </section>
-
-              <section>
-                <h2>🤼‍♂️ Matchups</h2>
-                <table>
-                  <tr>
-                    <th>Tu pick</th><th>Bueno contra (Supports)</th><th>Bueno contra (ADCs)</th><th>Malo contra (cuidado con...)</th>
-                  </tr>
-                  <tr>
-                    <td>Pyke</td>
-                    <td>Enchanters (Yuumi, Lulu, Janna)</td>
-                    <td>ADCs sin movilidad (Jhin, Varus, Kog’Maw)</td>
-                    <td>Engage pesados (Nautilus, Leona), peel fuerte</td>
-                  </tr>
-                  <tr>
-                    <td>Hwei</td>
-                    <td>Engage lentos (Alistar, Leona, Rakan)</td>
-                    <td>ADCs estáticos (Jhin, Aphelios, Ashe)</td>
-                    <td>Hooks rápidos (Blitzcrank), asesinos, snowball</td>
-                  </tr>
-                  <tr>
-                    <td>Rakan</td>
-                    <td>Melee sin movilidad (Nautilus, Leona)</td>
-                    <td>ADCs sin dash (Jhin, Miss Fortune)</td>
-                    <td>Peel duros (Morgana, Karma), poke excesivo</td>
-                  </tr>
-                  <tr>
-                    <td>Poppy</td>
-                    <td>Dashers (Rakan, Leona, Tristana, Kai’Sa)</td>
-                    <td>ADCs con movilidad (Lucian, Vayne, Samira)</td>
-                    <td>Pokeo constante (Zyra, Karma), enchanters que te kitean</td>
-                  </tr>
-                </table>
-              </section>
-
-              <section>
-                <h2>🤝 Mejores combinaciones con ADC</h2>
-                <table>
-                  <tr>
-                    <th>Support</th><th>Mejores ADCs aliados</th><th>¿Por qué funcionan bien juntos?</th>
-                  </tr>
-                  <tr>
-                    <td>Pyke</td>
-                    <td>Draven, Kalista, Lucian, Samira, Tristana<br>(Jhin también funciona)</td>
-                    <td>All-in, daño rápido, roaming temprano. Con Jhin: burst a distancia + CC.</td>
-                  </tr>
-                  <tr>
-                    <td>Hwei</td>
-                    <td>Jhin, Caitlyn, Ezreal, Aphelios, Varus<br>Seraphine, Ziggs (AP carries)</td>
-                    <td>Control de mapa, CC, poke seguro. Con APs, ayuda en control y limpieza.</td>
-                  </tr>
-                  <tr>
-                    <td>Rakan</td>
-                    <td>Xayah ❤️, Kai’Sa, Samira, Lucian, Tristana<br>Twitch (combo sorpresa)</td>
-                    <td>Engage rápido y sincronía, con Twitch: engage invisible sorpresa.</td>
-                  </tr>
-                  <tr>
-                    <td>Poppy</td>
-                    <td>Jhin, Twitch, Kog’Maw, Aphelios, Ashe<br>Vayne (vs dashes)</td>
-                    <td>Peel fuerte, cancela engages. Ideal para ADCs frágiles y sin movilidad.</td>
-                  </tr>
-                </table>
-              </section>
-            </div>
-
-            <!-- Pestaña Malidamas -->
-            <div class="nested-tab-pane" id="content-malidamas">
-              <h2>📝 Tabla Malidamas</h2>
-              <table>
-                <tr>
-                  <th>ADC</th><th>Pyke</th><th>Hwei</th><th>Rakan</th><th>Poppy</th><th>Comentario general</th>
-                </tr>
-                <tr>
-                  <td>Xayah</td><td>⚠️ Regular</td><td>⚠️ Regular</td><td>✅ Excelente</td><td>⚠️ Regular</td>
-                  <td>Rakan + Xayah es sinergia natural, peel + engage.</td>
-                </tr>
-                <tr>
-                  <td>Jhin</td><td>✅ Muy buena</td><td>✅ Buena</td><td>⚠️ Regular</td><td>❌ Débil</td>
-                  <td>Jhin brilla con CC de Pyke o poke de Hwei.</td>
-                </tr>
-                <tr>
-                  <td>Kai’Sa</td><td>✅ Buena</td><td>❌ Débil</td><td>✅ Muy buena</td><td>⚠️ Regular</td>
-                  <td>Kai’Sa sigue engages (Rakan), combo con Pyke.</td>
-                </tr>
-                <tr>
-                  <td>MF</td><td>✅ Buena</td><td>✅ Buena</td><td>⚠️ Regular</td><td>❌ Débil</td>
-                  <td>MF + Pyke o Hwei para combos de burst.</td>
-                </tr>
-                <tr>
-                  <td>Varus</td><td>✅ Muy buena</td><td>✅ Excelente</td><td>⚠️ Regular</td><td>❌ Débil</td>
-                  <td>Varus poke + Hwei poke controlan línea fácilmente.</td>
-                </tr>
-                <tr>
-                  <td>Jinx</td><td>❌ Débil</td><td>✅ Buena</td><td>✅ Buena</td><td>✅ Buena</td>
-                  <td>Jinx necesita peel, no tanto engage.</td>
-                </tr>
-                <tr>
-                  <td>Senna</td><td>❌ Débil</td><td>✅ Buena</td><td>⚠️ Regular</td><td>✅ Muy buena</td>
-                  <td>Senna + Poppy es doble sustain + control.</td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
+            <section id="meal-list-container">
+                <h2>Mis Comidas Guardadas</h2>
+                <div id="meal-list">
+                    </div>
+            </section>
+        </main>
     </div>
-  </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
