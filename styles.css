@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --bg-color: #F7FDF9; /* Un fondo blanco con un toque muy sutil de verde */
-    --card-bg-color: #ffffff;
-    --text-color: #3A3A3A; /* Un gris oscuro (semillas) */
-    --heading-color: #FF6B6B; /* Rojo-rosa principal de la sandía */
-    --accent-color: #4ECDC4; /* Verde menta fresco (cáscara) */
-    --danger-color: #FF6B6B; /* Reutilizamos el color principal para eliminar */
-    --border-color: #E0E0E0;
-    --shadow-color: rgba(0, 0, 0, 0.07);
+    --bg-color: #ed1c3b;
+    --card-bg-color: #13e01f;
+    --text-color: #010910;
+    --heading-color: #020910;
+    --accent-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --border-color: #020910;
+    --shadow-color: rgb(0 0 0 / 78%);
     --font-family: 'Poppins', sans-serif;
 }
 
