@@ -1,186 +1,132 @@
-/* ========== BODY & HEADINGS ========== */
+/* Estilos Generales */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #1a1a2e;
-  color: #e0e0e0;
-  margin: 0;
-  padding: 2rem;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
 }
 
-h1 {
-  text-align: center;
-  font-size: 2.8rem;
-  margin-bottom: 2.5rem;
-  color: #9370db;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-h2 {
-  font-size: 1.8rem;
-  margin-top: 2rem;
-  color: #7a82ed;
+header h1 {
+    color: #2a9d8f;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-/* ========== TAB CONTAINER PRINCIPAL ========== */
-.tab-container {
-  width: 100%;
-  margin-top: 2rem;
+/* Formulario */
+#meal-form {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
 }
 
-.tab-container input[type="radio"] {
-  display: none;
+#meal-form h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
 }
 
-.tab-button {
-  display: inline-block;
-  background-color: #2a2a4a;
-  color: #add8e6;
-  padding: 12px 20px;
-  margin-right: 5px;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s, color 0.3s;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+.form-group {
+    margin-bottom: 20px;
 }
 
-.tab-button:hover {
-  background-color: #3f3f6f;
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
 }
 
-.tab-content {
-  background-color: #2a2a4a;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    transition: border-color 0.3s;
 }
 
-/* Ocultar todos los panes */
-.tab-pane {
-  display: none;
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2a9d8f;
 }
 
-/* Mostrar pane seleccionado */
-#tab-players:checked  ~ .tab-content #content-players,
-#tab-chuleta:checked  ~ .tab-content #content-chuleta {
-  display: block;
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Estilos de la pestaña activa */
-#tab-players:checked + label,
-#tab-chuleta:checked + label {
-  background-color: #3f3f6f;
-  color: #dda0dd;
-  border-bottom: 2px solid #dda0dd;
+button[type="submit"]:hover {
+    background-color: #264653;
 }
 
-/* ========== NESTED TAB CONTAINER ========== */
-.nested-tab-container {
-  margin-top: 1.5rem;
+/* Lista de Comidas */
+#meal-list-container h2 {
+    text-align: center;
+    color: #333;
 }
 
-.nested-tab-container input[type="radio"] {
-  display: none;
+.meal-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow-wrap: break-word; /* Evita que el texto largo se salga */
 }
 
-.nested-tab-button {
-  display: inline-block;
-  background-color: #2a2a4a;
-  color: #add8e6;
-  padding: 8px 16px;
-  margin-right: 4px;
-  border: none;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.3s, color 0.3s;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+.meal-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #e76f51;
 }
 
-.nested-tab-button:hover {
-  background-color: #3f3f6f;
+.meal-card p {
+    margin: 0;
+    white-space: pre-wrap; /* Mantiene los saltos de línea del textarea */
+    line-height: 1.6;
 }
 
-.nested-tab-content {
-  background-color: #2a2a4a;
-  padding: 1.5rem;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+.delete-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.nested-tab-pane {
-  display: none;
-}
-
-/* Mostrar pane interno según radio */
-#tab-neku:checked      ~ .nested-tab-content #content-neku,
-#tab-malidamas:checked ~ .nested-tab-content #content-malidamas {
-  display: block;
-}
-
-/* Estilo de label activo */
-#tab-neku:checked + label,
-#tab-malidamas:checked + label {
-  background-color: #3f3f6f;
-  color: #dda0dd;
-  border-bottom: 2px solid #dda0dd;
-}
-
-/* Diferenciar cabeceras de Malidamas */
-#content-malidamas table th {
-  background-color: #467c9b;
-}
-
-/* ========== TABLAS ========== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-  background-color: #2a2a4a;
-  border: 1px solid #5a5a7a;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-th, td {
-  padding: 1rem;
-  border: 1px solid #9595ce;
-  text-align: left;
-}
-
-th {
-  background-color: #3f3f6f;
-  color: #add8e6;
-  font-weight: bold;
-}
-
-/* ========== IFRAMES ========== */
-.iframe-container {
-  display: flex;
-  justify-content: space-around;
-  gap: 2rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-
-.iframe-box {
-  flex: 1;
-  min-width: 45%;
-  text-align: center;
-}
-
-.violet-title {
-  color: #dda0dd;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-}
-
-.blue-title {
-  color: #87cefa;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+.delete-btn:hover {
+    background-color: #c1212d;
+    transform: scale(1.1);
 }
