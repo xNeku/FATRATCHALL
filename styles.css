@@ -1,15 +1,15 @@
-/* --- Importación de Fuente y Variables de Color --- */
+/* --- Importación de Fuente y Variables de Color (Tema Sandía) --- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --bg-color: #f8f9fa;
+    --bg-color: #F7FDF9; /* Un fondo blanco con un toque muy sutil de verde */
     --card-bg-color: #ffffff;
-    --text-color: #34495e;
-    --heading-color: #3498db;
-    --accent-color: #2ecc71;
-    --danger-color: #e74c3c;
-    --border-color: #dee2e6;
-    --shadow-color: rgba(0, 0, 0, 0.08);
+    --text-color: #3A3A3A; /* Un gris oscuro (semillas) */
+    --heading-color: #FF6B6B; /* Rojo-rosa principal de la sandía */
+    --accent-color: #4ECDC4; /* Verde menta fresco (cáscara) */
+    --danger-color: #FF6B6B; /* Reutilizamos el color principal para eliminar */
+    --border-color: #E0E0E0;
+    --shadow-color: rgba(0, 0, 0, 0.07);
     --font-family: 'Poppins', sans-serif;
 }
 
@@ -85,7 +85,7 @@ input[type="text"]:focus,
 textarea:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+    box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.25);
 }
 
 textarea {
@@ -96,7 +96,7 @@ textarea {
 button[type="submit"] {
     width: 100%;
     padding: 16px;
-    background: linear-gradient(45deg, var(--heading-color), #2980b9);
+    background: linear-gradient(45deg, #FF6B6B, #EE5A5A);
     color: white;
     border: none;
     border-radius: 10px;
@@ -104,12 +104,12 @@ button[type="submit"] {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
 }
 
 button[type="submit"]:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
 }
 
 /* --- Lista y Tarjetas de Comida --- */
@@ -162,15 +162,15 @@ button[type="submit"]:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0.5; /* Se ve semitransparente por defecto */
+    opacity: 0.5;
     transition: all 0.3s ease;
 }
 
 .meal-card:hover .delete-btn {
-    opacity: 1; /* Se vuelve opaco al pasar el ratón por la tarjeta */
+    opacity: 1;
     transform: scale(1.1);
 }
 
 .delete-btn:hover {
-    background-color: #c0392b; /* Rojo más oscuro al pasar el ratón */
+    background-color: #E55A5A; /* Un poco más oscuro al pasar el ratón */
 }
