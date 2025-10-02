@@ -1,132 +1,176 @@
-/* Estilos Generales */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    background-color: #f4f7f6;
-    color: #333;
+/* --- Importación de Fuente y Variables de Color --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-color: #f8f9fa;
+    --card-bg-color: #ffffff;
+    --text-color: #34495e;
+    --heading-color: #3498db;
+    --accent-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --border-color: #dee2e6;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --font-family: 'Poppins', sans-serif;
 }
 
+/* --- Estilos Generales y Reset --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+/* --- Contenedor Principal y Layout --- */
 .container {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 700px;
+    margin: 40px auto;
     padding: 20px;
 }
 
 header h1 {
-    color: #2a9d8f;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
     text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Formulario */
-#meal-form {
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     margin-bottom: 40px;
+    letter-spacing: -1px;
 }
 
-#meal-form h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #333;
+h2 {
+    font-weight: 600;
     text-align: center;
+    margin-bottom: 25px;
+    color: var(--text-color);
+}
+
+/* --- Formulario de Añadir Comida --- */
+#meal-form {
+    background-color: var(--card-bg-color);
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px var(--shadow-color);
+    margin-bottom: 50px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
-    color: #555;
+    font-size: 0.9rem;
 }
 
 input[type="text"],
 textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-    transition: border-color 0.3s;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    transition: all 0.3s ease;
 }
 
 input[type="text"]:focus,
 textarea:focus {
     outline: none;
-    border-color: #2a9d8f;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
 }
 
 button[type="submit"] {
     width: 100%;
-    padding: 15px;
-    background-color: #2a9d8f;
+    padding: 16px;
+    background: linear-gradient(45deg, var(--heading-color), #2980b9);
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: 700;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
 }
 
 button[type="submit"]:hover {
-    background-color: #264653;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
 }
 
-/* Lista de Comidas */
-#meal-list-container h2 {
-    text-align: center;
-    color: #333;
+/* --- Lista y Tarjetas de Comida --- */
+#meal-list-container {
+    margin-top: 40px;
 }
 
 .meal-card {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background-color: var(--card-bg-color);
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 30px var(--shadow-color);
     position: relative;
-    overflow-wrap: break-word; /* Evita que el texto largo se salga */
+    overflow-wrap: break-word;
+    transition: all 0.3s ease;
+}
+
+.meal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
 }
 
 .meal-card h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #e76f51;
+    margin: 0 0 10px 0;
+    color: var(--heading-color);
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 .meal-card p {
     margin: 0;
-    white-space: pre-wrap; /* Mantiene los saltos de línea del textarea */
-    line-height: 1.6;
+    white-space: pre-wrap;
+    color: #555;
 }
 
 .delete-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    background-color: #e63946;
+    top: 20px;
+    right: 20px;
+    background-color: var(--danger-color);
     color: white;
     border: none;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    font-size: 16px;
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s, transform 0.2s;
+    opacity: 0.5; /* Se ve semitransparente por defecto */
+    transition: all 0.3s ease;
+}
+
+.meal-card:hover .delete-btn {
+    opacity: 1; /* Se vuelve opaco al pasar el ratón por la tarjeta */
+    transform: scale(1.1);
 }
 
 .delete-btn:hover {
-    background-color: #c1212d;
-    transform: scale(1.1);
+    background-color: #c0392b; /* Rojo más oscuro al pasar el ratón */
 }
